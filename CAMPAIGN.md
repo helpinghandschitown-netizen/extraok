@@ -2,7 +2,7 @@
 
 ## Status
 
-Not yet launched. Public deployment and a real checkout must be verified first. No channel activity may imply that a GitHub issue form is a checkout.
+The free production release is live at https://helpinghandschitown-netizen.github.io/extraok/ and the public GitHub release is verified at https://github.com/helpinghandschitown-netizen/extraok/releases/tag/v1.0.0. Repository description, homepage, and six discovery topics are published. Paid promotion remains gated on a verified merchant checkout. No channel activity may imply that a GitHub issue form is a checkout.
 
 ## Positioning
 
