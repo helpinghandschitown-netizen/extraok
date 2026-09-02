@@ -33,7 +33,7 @@ function download(name, content, type='application/json') {
 }
 
 const statusLabel = status => status.replaceAll('_',' ');
-const dateTime = value => new Intl.DateTimeFormat(undefined,{dateStyle:'medium',timeStyle:'short',timeZoneName:'short'}).format(new Date(value));
+const dateTime = value => new Intl.DateTimeFormat(undefined,{year:'numeric',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(value));
 function persist(next=state) { state=next; saveState(state); }
 function setMain(html, className='shell') { app.className=className; app.innerHTML=html; app.focus({preventScroll:true}); window.scrollTo({top:0,behavior:'instant'}); }
 
@@ -158,11 +158,11 @@ function notFound(){setMain(`<div class="empty"><h2>Record not found</h2><p>This
 async function render() {
   const r=route();
   try {
-    if(r.name==='review')return reviewView(r.value);
-    if(r.name==='decision')return decisionView(r.value);
-    if(r.name==='receipt')return receiptView(r.value);
+    if(r.name==='review')return await reviewView(r.value);
+    if(r.name==='decision')return await decisionView(r.value);
+    if(r.name==='receipt')return await receiptView(r.value);
     if(r.name==='new')return newView();
-    if(r.name==='issued')return issuedView(r.value);
+    if(r.name==='issued')return await issuedView(r.value);
     if(r.name==='record')return recordView(r.value);
     if(r.name==='import')return importView();
     if(r.name==='pricing')return pricingView();
