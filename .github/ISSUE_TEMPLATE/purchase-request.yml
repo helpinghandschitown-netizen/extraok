@@ -1,0 +1,30 @@
+name: Pro license purchase request
+description: Request a private checkout/invoice for ExtraOK Pro Lifetime. Do not include client or payment data.
+title: "Pro license request — "
+labels: ["purchase-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do **not** include client names, project details, addresses, tax IDs, card data, passwords, or other sensitive information. The seller will provide a separate payment route.
+  - type: input
+    id: organization
+    attributes:
+      label: Business or organization name
+      placeholder: Example Contracting LLC
+    validations:
+      required: true
+  - type: dropdown
+    id: use
+    attributes:
+      label: Primary use
+      options: [Remodeling, Painting, Landscaping, HVAC, Plumbing, Electrical, Handyman, Other]
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Acknowledgment
+      options:
+        - label: I understand this request is public and contains no sensitive customer or payment information.
+          required: true

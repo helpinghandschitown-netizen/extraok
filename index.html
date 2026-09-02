@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="ExtraOK creates clear, private change-order approvals in any modern browser. No client account, no project data sent to our servers.">
+  <meta name="theme-color" content="#12221b">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://github.com">
+  <title>ExtraOK — get extra work approved before you do it</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ExtraOK home"><span class="brand-mark" aria-hidden="true">✓</span><span>ExtraOK</span></a>
+    <nav aria-label="Primary">
+      <a href="#home">Dashboard</a><a href="#new">New approval</a><a href="#import">Import receipt</a><a href="#pricing">Pricing</a>
+    </nav>
+    <button id="install-app" class="button ghost compact" hidden>Install app</button>
+  </header>
+  <main id="app" tabindex="-1" aria-live="polite"></main>
+  <footer class="site-footer">
+    <div><strong>ExtraOK</strong><span>Clear scope. Clear price. Clear yes.</span></div>
+    <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="#security">Security</a></nav>
+    <small>Operational records only. ExtraOK does not provide legal advice or guarantee enforceability.</small>
+  </footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="src/app.mjs"></script>
+</body>
+</html>

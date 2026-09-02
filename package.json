@@ -1,0 +1,11 @@
+{
+  "name": "extraok",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/app.mjs && node --check src/core.mjs && node --check src/crypto.mjs && node --check src/store.mjs && node --check src/license.mjs && node --check sw.js",
+    "serve": "python -m http.server 4177"
+  }
+}
