@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /extraok/
+Sitemap: https://helpinghandschitown-netizen.github.io/extraok/sitemap.xml
