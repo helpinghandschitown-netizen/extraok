@@ -47,7 +47,7 @@ Verified competitor facts as of 2026-09-02:
 - Pro Lifetime: **$19 one-time introductory price**, unlimited local records and future v1 updates.
 - No subscription, ads, data sale, or artificial export lock-in.
 
-This price is an estimate, not validated revenue. Paid sales cannot begin until a merchant account, verified checkout URL, merchant identity, refund terms, and required tax/KYC details are supplied and tested.
+This price remains an unvalidated revenue hypothesis. A live Stripe Payment Link now sells the one-time license for $19 with automatic tax collection enabled. License fulfillment is manual after verified payment while sales volume is low; automate it before volume makes the one-business-day delivery promise unreliable.
 
 ## Validation and distribution
 
@@ -83,8 +83,8 @@ After a verified public free release and a compliant checkout are available, par
 - [x] Unit and full browser-flow tests pass
 - [x] No external network origins during browser QA
 - [x] Privacy, terms, security boundaries, backup/export, and signed license system
-- [ ] Public deployment verified from a clean client
-- [ ] Preliminary trademark review recorded
-- [ ] Real checkout and merchant disclosures verified
-- [ ] First compliant promotion published and read back
+- [x] Public deployment verified from a clean client
+- [x] Preliminary exact-name trademark screen recorded (not full clearance)
+- [x] Real Stripe checkout, price, product, active status, and tax setting verified
+- [x] First compliant public repository/release promotion published and read back
 - [ ] First independent activation and first payment recorded

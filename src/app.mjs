@@ -5,7 +5,7 @@ import {verifyLicenseCode} from './license.mjs';
 
 const app = document.querySelector('#app');
 const toastEl = document.querySelector('#toast');
-const PURCHASE_URL = 'https://github.com/helpinghandschitown-netizen/extraok/issues/new?template=purchase-request.yml';
+const PURCHASE_URL = 'https://buy.stripe.com/5kQ3cvfgHexp4qR4kPdby00';
 let state = loadState();
 let installPrompt = null;
 
@@ -59,7 +59,7 @@ function recordsMarkup() {
 }
 
 function pricingMarkup() {
-  return `<div class="section-heading"><div><span class="eyebrow">Simple ownership</span><h2>Start free. Buy the tool once.</h2><p>No auto-renewal, per-envelope fee, ads, or sale of project data.</p></div></div><div class="price-grid"><article class="price-card"><h3>Free</h3><div class="price">$0</div><ul><li>Up to 3 pending approvals</li><li>Private review links</li><li>Signed decision receipts</li><li>Print and JSON backup</li></ul><a class="button ghost" href="#new">Use free</a></article><article class="price-card featured"><h3>Pro Lifetime</h3><div class="price">$19 <small>one time</small></div><ul><li>Unlimited approval records</li><li>Lifetime access to this edition</li><li>Offline install</li><li>Priority email support</li></ul><a class="button secondary" href="${PURCHASE_URL}" target="_blank" rel="noopener">Request a Pro license</a><a class="button ghost compact" href="#license">Activate a license</a></article></div>`;
+  return `<div class="section-heading"><div><span class="eyebrow">Simple ownership</span><h2>Start free. Buy the tool once.</h2><p>No auto-renewal, per-envelope fee, ads, or sale of project data.</p></div></div><div class="price-grid"><article class="price-card"><h3>Free</h3><div class="price">$0</div><ul><li>Up to 3 pending approvals</li><li>Private review links</li><li>Signed decision receipts</li><li>Print and JSON backup</li></ul><a class="button ghost" href="#new">Use free</a></article><article class="price-card featured"><h3>Pro Lifetime</h3><div class="price">$19 <small>one time</small></div><ul><li>Unlimited approval records</li><li>Lifetime access to this edition</li><li>Offline install</li><li>Priority email support</li></ul><a class="button secondary" href="${PURCHASE_URL}" target="_blank" rel="noopener">Buy Pro — $19</a><a class="button ghost compact" href="#license">Activate a license</a><p class="muted">Signed license delivery to your checkout email follows payment verification, normally within one business day.</p></article></div>`;
 }
 
 function bindCommon() {
@@ -148,7 +148,7 @@ function pricingView(){setMain(`${headerBlock('Pricing','Own the tool instead of
 function securityView(){location.hash='home';setTimeout(()=>document.querySelector('#security')?.scrollIntoView(),0)}
 
 function licenseView() {
-  setMain(`${headerBlock('Activate Pro','Paste the signed license code delivered after purchase. Activation is checked locally.')}<div class="panel"><form id="license-form"><div class="field"><label for="license-code">License code</label><textarea id="license-code" name="code" autocomplete="off" spellcheck="false"></textarea></div><div class="button-row"><button class="button secondary" type="submit">Activate</button><a class="button ghost" href="${PURCHASE_URL}" target="_blank" rel="noopener">Request a license</a></div></form><div id="license-result"></div></div>`);
+  setMain(`${headerBlock('Activate Pro','Paste the signed license code delivered to your checkout email after payment verification. Activation is checked locally.')}<div class="panel"><form id="license-form"><div class="field"><label for="license-code">License code</label><textarea id="license-code" name="code" autocomplete="off" spellcheck="false"></textarea></div><div class="button-row"><button class="button secondary" type="submit">Activate</button><a class="button ghost" href="${PURCHASE_URL}" target="_blank" rel="noopener">Buy Pro — $19</a></div></form><div id="license-result"></div></div>`);
   document.querySelector('#license-form').addEventListener('submit',async event=>{event.preventDefault();const code=new FormData(event.currentTarget).get('code');const license=await verifyLicenseCode(code);if(!license){document.querySelector('#license-result').innerHTML='<div class="notice danger">This license code is invalid.</div>';return}state.licenseCode=String(code).trim();state.license=license;persist();document.querySelector('#license-result').innerHTML=`<div class="notice"><strong>Pro activated.</strong> Licensed to ${h(license.customer)}.</div>`});
 }
 

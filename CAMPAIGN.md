@@ -2,7 +2,7 @@
 
 ## Status
 
-The free production release is live at https://helpinghandschitown-netizen.github.io/extraok/ and the public GitHub release is verified at https://github.com/helpinghandschitown-netizen/extraok/releases/tag/v1.0.0. Repository description, homepage, and six discovery topics are published. Paid promotion remains gated on a verified merchant checkout. No channel activity may imply that a GitHub issue form is a checkout.
+The production release is live at https://helpinghandschitown-netizen.github.io/extraok/, the public GitHub release is verified at https://github.com/helpinghandschitown-netizen/extraok/releases/tag/v1.0.0, and the active $19 one-time Stripe checkout is https://buy.stripe.com/5kQ3cvfgHexp4qR4kPdby00. Repository description, homepage, and six discovery topics are published. Expansion beyond owned channels should follow only after the checkout-integrated deployment is verified and manual license fulfillment is monitored.
 
 ## Positioning
 

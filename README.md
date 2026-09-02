@@ -15,7 +15,7 @@ Open `http://127.0.0.1:4177`.
 
 - Static PWA; no backend, analytics, cookies, external fonts, ads, or third-party scripts.
 - Free: up to three pending approvals.
-- Pro Lifetime: signed offline license key unlocks unlimited records.
+- Pro Lifetime: $19 one-time Stripe checkout; a signed offline license key unlocks unlimited records.
 - License signing private key lives outside the repository under the Hermes secrets directory.
 - Customer data stays in browser storage and URL fragments. Users must export backups; clearing browser data deletes local records.
 
@@ -25,4 +25,4 @@ ExtraOK creates operational records. It does not provide legal advice, verify id
 
 ## Deployment
 
-GitHub Pages deploys the static root through `.github/workflows/pages.yml`. Public deployment and checkout/purchase handles must be verified before release claims.
+GitHub Pages deploys the static root through `.github/workflows/pages.yml`. The verified checkout is `https://buy.stripe.com/5kQ3cvfgHexp4qR4kPdby00`; license fulfillment uses the offline issuer script after Stripe payment verification.
