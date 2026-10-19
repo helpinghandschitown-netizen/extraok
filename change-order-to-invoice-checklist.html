@@ -68,6 +68,36 @@
       <dt><strong>Proposed invoice line</strong></dt><dd>Does its description, reference, amount, and treatment match the agreed basis without duplication?</dd>
       <dt><strong>Unresolved exception</strong></dt><dd>What must be clarified, by whom, before sending?</dd>
     </dl>
+    <section id="print-worksheet" aria-labelledby="worksheet-heading">
+      <h2 id="worksheet-heading">Printable change-to-invoice worksheet</h2>
+      <p>Use one sheet per change. Print this page using your browser's Print command; this worksheet starts on its own page. Fill it in on paper or copy the labels into your private bookkeeping file. Nothing entered on paper is saved by ExtraOK.</p>
+      <p><strong>Check records, not assumptions.</strong> Approval, completion, billing eligibility, and payment are separate checks. Leave an unknown item marked “not verified”; do not infer consent or payment from silence.</p>
+      <dl class="reconciliation-sheet">
+        <dt>Project / change reference / current revision</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Reviewed by / date checked</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Approved scope / amount / decision-record reference / conditions</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Work completed / remaining work / evidence reference</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Agreed billing milestone / evidence that it is met</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Earlier invoice lines / applicable credits / duplicate-charge check</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Payment allocation / source and date checked / or not verified</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Proposed invoice reference / line / amount / verified tax treatment</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+        <dt>Open question / next action / responsible person / follow-up date</dt><dd><span aria-hidden="true">&nbsp;</span></dd>
+      </dl>
+      <p><strong>Before sending:</strong> confirm the exact revision, resolve conditions, check prior billing, and retain supporting documents. This worksheet is not an approval, invoice, payment receipt, or legal determination. Keep completed sheets private; record references, not card details, passwords, or banking credentials.</p>
+    </section>
+    <style>
+      #print-worksheet { margin-block: 2rem; }
+      .reconciliation-sheet dt { font-weight: 650; overflow-wrap: anywhere; }
+      .reconciliation-sheet dd { margin: 0 0 1rem; min-height: 2.4rem; border-bottom: 1px solid currentColor; }
+      @media print {
+        #print-worksheet { break-before: page; break-after: page; margin: 0; color: #000; font-size: 10pt; line-height: 1.25; }
+        #print-worksheet h2 { font-size: 16pt; margin: 0 0 8pt; }
+        #print-worksheet p { margin: 6pt 0; }
+        #print-worksheet dl { margin: 8pt 0; }
+        #print-worksheet dt { break-after: avoid; }
+        #print-worksheet dd { min-height: 22pt; margin-bottom: 8pt; break-before: avoid; }
+      }
+    </style>
     <h2 id="billing-exceptions">4. Check common exceptions</h2>
     <ul>
       <li><strong>Deposit already collected:</strong> verify its allocation under the agreement. Do not confuse payment received with the amount previously invoiced.</li>
